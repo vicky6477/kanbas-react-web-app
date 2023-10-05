@@ -3,86 +3,127 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Screen</title>
-    <!-- 
-    <style>
-        table{
-            width: 100%;
-            td{
-                vertical-align: to p;
-            }
-        }
-    </style> -->
+    <title>Profile Screen</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css"/>
+    <script src="https://kit.fontawesome.com/c2ac2de1fd.js" crossorigin="anonymous"></script>
+    
+
 </head>
+
 <body>
-<table>
-    <tr valign="baseline">
-        <!-- First Column: Kanbas Navigation -->
-        <td>
-            <ul>
-                <li><a href="../../Account/Profile/screen.html">Account</a></li>
-                <li><a href="Kanbas/Dashboard/screen.html">Dashboard</a></li>
-                <li><a href="../../Courses/CourseNavigation/screen.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
+<div class="my-container">
+    <!-- First Column: Kanbas Navigation -->
+    <div class="kanbas-navigation">
+        <ul class="wd-kanbas-navigation">
+            <li><a href="#"></i><i class="fa-solid fa-n" aria-hidden="true"></i>Northeastern University</a></li>
+            <!-- <li class="wd-active"><a href="javascript:void(0);" onclick="toggleCourseNav();"><i class="fa-solid fa-user" aria-hidden="true"></i>Account</a></li> -->
+            <li class="wd-active"><a href="../Profile/screen.html"><i class="fa-solid fa-user" aria-hidden="true"></i>Account</a>
+            </li>
+            <li><a href="../../Dashboard/screen.html"> <i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+            </li>
+            <li><a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book" aria-hidden="true"></i>Courses</a>
+            </li>
+            <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+            <li><a href="#"><i class="fa-solid fa-inbox" aria-hidden="true"></i>Inbox</a></li>
+            <li><a href="#"><i class="fa-sharp fa-regular fa-clock" aria-hidden="true"></i>History</a></li>
+            <li><a href="#"><i class="fa-regular fa-circle-play" aria-hidden="true"></i>Studio</a></li>
+            <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>Commons</a></li>
+            <li><a href="#"><i class="fa-sharp fa-solid fa-circle-question" aria-hidden="true"></i>Help</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="profile-section">
+            <i class="fa-solid fa-bars" onclick="toggleCourseNav();"></i>
+            <a href="../Profile/screen.html" class="user-profile-link">Jose Annunziato's Profile</a>
+        </div>
 
         <!-- Second Column: Course Navigation -->
-        <td>
-            <ul>
-                <li><a href="#">Notification</a></li>
-                <li><a href="../Profile/screen.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="../../Courses/Settings/screen.html">Settings</a></li>
-                <li><a href="#">ePortfolio</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The hub</a></li>
-                <li><a href="#">Quickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </td>
-        <td>
-            <span>Jose Annunziato's Profile</span>
-            <br></br>
-            <hr></hr>
+        <div class="content-below-profile">
+            <div class="course-navigation" id="accountNav" style="display:block;">
+                <ul class="account-navigation">
+                    <li><a href="#">Notification</a></li>
+                    <li><a href="../Profile/screen.html" class="active">Profile</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="../../Courses/Settings/screen.html">Settings</a></li>
+                    <li><a href="#">ePortfolio</a></li>
+                    <li><a href="#">Shared Content</a></li>
+                    <li><a href="#">The hub</a></li>
+                    <li><a href="#">Quickly Course Tools</a></li>
+                    <li><a href="#">Global Announcements</a></li>
+                </ul>
+            </div>
 
-            <table>
-                <tr valign="baseline">
-                    <td>
-                        <h2>Jose Annunziato</h2>
+            <div class="account-section">
+                <div class="account-icon-wrapper" onclick="uploadProfilePicture();">
+                    <i class="fa-regular fa-user account-icon"></i>
+                    <i class="fas fa-pencil-alt account-pencil"
+                       onclick="event.stopPropagation(); uploadProfilePicture();"></i>
+                </div></br>
 
-                        <h2>Contact</h2>
-                        <span>No registered services, you can add some on the <a href="#">settings</a> page.</span>
-                        </br>
+                <div class="user-info">
+                    <h4>Jose Annunziato</h4></br>
+                    <h4>Contact</h4> </br>
+                    <span>No registered services, you can add some on the <a href="../../Courses/Settings/screen.html">settings</a> page.</span><br></br>
+                    
 
-                        <h2>Biography</h2>
-                        Faculty, Software Engineer, AI, Space, and renewable enthusiast.
-                        </br>
+                    <h4>Biography</h4></br>
+                    Faculty, Software Engineer, AI, Space, and renewable enthusiast.
+                    </br></br>
 
-                        <h2>Links</h2>
-                        <a href="#">Youtube</a>
-                        <br></br>
+                    <h4>Links</h4>
+                    <!-- <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk"> <i class="fas fa-link"></i> Youtube<i class="fas fa-external-link-alt"></i></a> -->
+                    <i class="fas fa-link non-clickable-icon"></i> 
+                    <a href="https://www.youtube.com/watch?v=_Hq9n7cc8rk" class="youtube-link">Youtube<i class="fas fa-external-link-alt"></i></a>
+
+                    <br></br>
+                </div>
+            </div>
+
+            <div class="edit-section">
+                <form action="../Profile/EditorProfile/screen.html">
+                    <button class="btn btn-light"><i class="fa-solid fa-pencil"></i>Edit Profile</button>
+                </form> 
+            </div>
+    </div>
+</div>
+
+<script>
+function toggleCourseNav(e) {
+    if (e) {
+        e.stopPropagation();
+    }
+    
+    var courseNav = document.querySelector(".course-navigation");
+    if (courseNav.style.display === "block") {
+        courseNav.style.display = "none";
+    } else {
+        courseNav.style.display = "block";
+    }
+}
 
 
-                    </td>
+function uploadProfilePicture() {
+    let upload = document.createElement('input');
+    upload.type = 'file';
+    upload.style.display = 'none';  
+    upload.accept = 'image/*';  
+    upload.onchange = function(event) {
+        let file = event.target.files[0];
+        console.log(file);
+    };
+    document.body.appendChild(upload); 
+    upload.click();
+}
 
-                    <td>
-                        <form action="../Profile/EditorProfile/screen.html">
-                            <button>Edit Profile</button>
-                        </form>
-                    </td>
-                </tr>
-            </table>
 
 
-        </td>
-    </tr>
-</table>
+</script>
+
 </body>
 </html>
                     

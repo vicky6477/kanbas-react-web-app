@@ -1,151 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Screen</title>
-        <!-- 
-        <style>
-            table{
-                width: 100%;
-                td{
-                    vertical-align: to p;
-                }
-            }
-        </style> -->
-    </head>
-    <body>
-        <table>
-            <tr valign="baseline">
-                <!-- First Column: Kanbas Navigation -->
-                <td>
-                    <ul>
-                        <li><a href="../../Account/Profile/screen.html">Account</a></li>
-                        <li><a href="Kanbas/Dashboard/screen.html">Dashboard</a></li>
-                        <li><a href="../CourseNavigation/screen.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
-                </td>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ho me Screen</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Home/screen.css"/>
+    <script src="https://kit.fontawesome.com/c2ac2de1fd.js" crossorigin="anonymous"></script>
+    
 
-                <!-- Second Column: Course Navigation -->
-                <td>
-                    <ul>
-                        <li><a href="./screen.html">Home</a></li>
-                        <li><a href="./screen.html">Module</a></li>
-                        <li><a href="#">Piazza</a></li>
-                        <li><a href="#">Zoom Meetings</a></li>
-                        <li><a href="../Assignments/screen.html">Assignments</a></li>
-                        <li><a href="#">Quizzes</a></li>
-                        <li><a href="../Grades/screen.html">Grades</a></li>
-                        <li><a href="#">People</a></li>
-                        <li><a href="#">Panopto Video</a></li>
-                        <li><a href="#">Discussions</a></li>
-                        <li><a href="#">Announcements</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Files</a></li>
-                        <li><a href="#">Rubrics</a></li>
-                        <li><a href="#">Outcomes</a></li>
-                        <li><a href="#">Collaborations</a></li>
-                        <li><a href="#">Syllabus</a></li>
-                        <li><a href="../Settings/screen.html">Settings</a></li>
-                    </ul>
-                </td>
-                <td>
-                    <a href="#"><button type="button">Collapse All</button></a>
-                    <a href="#"><button type="button">View Progress</button></a>
-                    <label for="select-one-genre"></label>
-                    <select>
-                        <option selected value="Publish All">Publish All</option>
-                        <option value="Publish all items and modules">Publish all items and modules</option>
-                        <option value="Unpublish">Unpublish</option>
-                    </select>
-                    <a href="#"><button type="button">Module</button></a>
+</head>
 
-                    <ul>
-                        <li>Week 0 - INTRO</li>
-                        <ul>
-                            <li>LEARNING OBJECTIVES</li>
-                            <ul>
-                                <li>Introduction to the course</li>
-                                <li>Learn what is Web Development</li>
-                                <li>Creating a development environment</li>
-                                <li>Creating a Web Application</li>
-                                <li>Getting started with the 1st assignment</li>
-                            </ul>
-                            <li>READING</li>
-                            <ul>
-                                <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                            </ul>
-                            <li>SLIDES</li>
-                            <ul>
-                                <li>
-                                    <a
-                                        href="https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit"
-                                    >
-                                        Introduction to Web Development
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit?usp=sharing"
-                                    >
-                                        Creating an HTTP server with Node.js
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p"
-                                    >
-                                        Creating a React Application
-                                    </a>
-                                </li>
-                            </ul>
-                        </ul>
+<body>
+<div class="my-container">
+    <!-- First Column: Kanbas Navigation -->
+    <div class="kanbas-navigation">
+        <ul class="wd-kanbas-navigation">
+            <li><a href="#"></i><i class="fa-solid fa-n" aria-hidden="true"></i>Northeastern University</a></li>
+            <li><a href="../Profile/screen.html"><i class="fa-solid fa-user" aria-hidden="true"></i>Account</a></li>
+            <li><a href="../../Dashboard/screen.html"> <i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+            </li>
+            <li  class="wd-active"><a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book" aria-hidden="true"></i>Courses</a>
+            </li>
+            <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+            <li><a href="#"><i class="fa-solid fa-inbox" aria-hidden="true"></i>Inbox</a></li>
+            <li><a href="#"><i class="fa-sharp fa-regular fa-clock" aria-hidden="true"></i>History</a></li>
+            <li><a href="#"><i class="fa-regular fa-circle-play" aria-hidden="true"></i>Studio</a></li>
+            <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>Commons</a></li>
+            <li><a href="#"><i class="fa-sharp fa-solid fa-circle-question" aria-hidden="true"></i>Help</a></li>
+        </ul>
+    </div>
 
-                        <li>Week 1 - HTML</li>
-                        <ul>
-                            <li>LEARNING OBJECTIVES</li>
-                            <ul>
-                                <li>Learn how to create user interfaces with HTML</li>
-                                <li>Keep working on assignment 1</li>
-                                <li>Deploy the assignment to Netlify</li>
-                            </ul>
-                            <li>READING</li>
-                            <ul>
-                                <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                            </ul>
-                        </ul>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="course-number-section">
+            <i class="fa-solid fa-bars" onclick="toggleCourseNav();"></i>
+            <a href="#" class="course-number-link">CS4450.12631.202410</a> > <a href="#"><button type="button">Module</button></a>
+        </div>
+
+
+        <div class="content-below-course-number"></div>
+        <!-- Second Column: Course Navigation -->
+        <div class="content-below-course-number">
+            <div class="course-navigation">
+                  <ul class="course-navigation">
+                    <li><a href="../Home/screen.html" class="active">Home</a></li>
+                    <li><a href="../Modules/screen.html">Module</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li><a href="../Assignments/screen.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="../Grades/screen.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="./screen.html">Settings</a></li>
+                </ul>
+            </div>
+
+            <div class="account-section">
+              <div class="button-section float-end">
+    <a href="#" class="btn btn-secondary">Collapse All</a>
+    <a href="#" class="btn btn-secondary">View Progress</a>
+    <label for="select-one-genre" class="form-label">Choose Action</label>
+    <select class="form-select">
+        <option selected value="Publish All">Publish All</option>
+        <option value="Publish all items and modules">Publish all items and modules</option>
+        <option value="Unpublish">Unpublish</option>
+    </select>
+    <a href="#" class="btn btn-danger">+ Module</a>
+</div>
+
+
+        
+
+                <div class="user-info">
+               <ul>
+                <li>Week 0 - INTRO</li>
+                <ul>
+                    <li>LEARNING OBJECTIVES</li>
+                    <ul>
+                        <li>Introduction to the course</li>
+                        <li>Learn what is Web Development</li>
+                        <li>Creating a development environment</li>
+                        <li>Creating a Web Application</li>
+                        <li>Getting started with the 1st assignment</li>
                     </ul>
-                </td>
+                    <li>READING</li>
+                    <ul>
+                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
+                        <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
+                    </ul>
+                    <li>SLIDES</li>
+                    <ul>
+                        <li>
+                            <a
+                                    href="https://docs.google.com/presentation/d/1yb_fQd5MhVuFczb5F5II0CoDkVJALFqxUnuwPAXiOAU/edit"
+                            >
+                                Introduction to Web Development
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                    href="https://docs.google.com/presentation/d/16yDwIH8np-tQL85g4bpmrsDfO8LaW38jr-fMQirLnoQ/edit?usp=sharing"
+                            >
+                                Creating an HTTP server with Node.js
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                    href="https://docs.google.com/presentation/d/10B3jLiJ8-HMsA6TPq9JuWfJzsvX9SFnYVuhthrQbFwU/edit#slide=id.p"
+                            >
+                                Creating a React Application
+                            </a>
+                        </li>
+                    </ul>
+                </ul>
+
+                <li>Week 1 - HTML</li>
+                <ul>
+                    <li>LEARNING OBJECTIVES</li>
+                    <ul>
+                        <li>Learn how to create user interfaces with HTML</li>
+                        <li>Keep working on assignment 1</li>
+                        <li>Deploy the assignment to Netlify</li>
+                    </ul>
+                    <li>READING</li>
+                    <ul>
+                        <li>Full Stack Developer - Chapter 1 - Introduction</li>
+                        <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
+                    </ul>
+                </ul>
+            </ul>
+            </td>
+                </div>
+            </div>
+
+            <div class="course-status">
                 <td>
-                    <h2>Course Status</h2>
-                    <button type="button">Unpublished</button>
-                    <button type="button">Published</button>
-                    <ul>
-                        <li><a href="#">Import Existing Content</a></li>
-                        <li><a href="#">Import From Commons</a></li>
-                        <li><a href="#">Import Existing Content</a></li>
-                        <li><a href="#">View Course Stream</a></li>
-                        <li><a href="#">New Announcement</a></li>
-                        <li><a href="#">New Analytics</a></li>
-                        <li><a href="#">View Course Notifications</a></li>
-                    </ul>
-                    <h2>Comming Up</h2>
-                    <a href="#">View Calendar</a>
-                    <ul>
-                        <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-                        <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-                        <li><a href="#">Lecture CS5610 06 SP23 Lecture Sep11 at 6pm</a></li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
-    </body>
+                <h2>Course Status</h2>
+                <button type="button">Unpublished</button>
+                <button type="button">Published</button>
+                <ul>
+                    <li><a href="#">Import Existing Content</a></li>
+                    <li><a href="#">Import From Commons</a></li>
+                    <li><a href="#">Import Existing Content</a></li>
+                    <li><a href="#">View Course Stream</a></li>
+                    <li><a href="#">New Announcement</a></li>
+                    <li><a href="#">New Analytics</a></li>
+                    <li><a href="#">View Course Notifications</a></li>
+                </ul>
+                <h2>Comming Up</h2>
+                <a href="#">View Calendar</a>
+                <ul>
+                    <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
+                    <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
+                    <li><a href="#">Lecture CS5610 06 SP23 Lecture Sep11 at 6pm</a></li>
+                </ul>
+            </td>
+            </div>
+    </div>
+</div>
+
+<script>
+function toggleCourseNav(e) {
+    if (e) {
+        e.stopPropagation();
+    }
+    
+    var courseNav = document.querySelector(".course-navigation");
+    if (courseNav.style.display === "block") {
+        courseNav.style.display = "none";
+    } else {
+        courseNav.style.display = "block";
+    }
+}
+
+
+function uploadProfilePicture() {
+    let upload = document.createElement('input');
+    upload.type = 'file';
+    upload.style.display = 'none';  
+    upload.accept = 'image/*';  
+    upload.onchange = function(event) {
+        let file = event.target.files[0];
+        console.log(file);
+    };
+    document.body.appendChild(upload); 
+    upload.click();
+}
+
+
+
+</script>
+
+</body>
 </html>
+                    
+
+
+

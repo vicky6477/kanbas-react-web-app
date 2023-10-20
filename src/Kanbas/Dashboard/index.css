@@ -1,0 +1,71 @@
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+.main-content {
+    padding: 1rem;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: auto;
+}
+
+
+/* .card img {
+    height: 50;
+    width: auto;
+} */
+
+/* .card h5 {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.card p {
+    margin: 0.25rem 0;
+} */
+
+.card-title {
+    color: blue;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-decoration: none;
+}
+.card-title:hover {
+    text-decoration: none;
+    color: blue;
+}
+
+.card-title a {
+    text-decoration: none !important;
+    color: blue !important;
+}
+
+.dashboard-section,
+.published-course-section {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+@media (max-width: 1200px) {
+    .courses-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .courses-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.wd-kanbas-navigation {
+    min-height: 150vh;
+    background-color: black !important;
+}

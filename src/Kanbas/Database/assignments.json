@@ -1,0 +1,18 @@
+[
+    { "_id": "A1", "title": "ENV + HTML", "course": "CS5001.19973.202309", "dueDate": "Sep 18 at 11:59pm", "points": 100 },
+    { "_id": "A2", "title": "CSS + BOOTSTRAP", "course": "CS5001.19973.202309", "dueDate": "Oct 2 at 11:59pm", "points": 100 },
+    { "_id": "A3", "title": "JS + REACT", "course": "CS5001.19973.202309", "dueDate": "Oct 16 at 11:59pm", "points": 100 },
+    { "_id": "A4", "title": "STATE + REDUX", "course": "CS5001.19973.202309", "dueDate": "Oct 30 at 11:59pm", "points": 100 },
+    { "_id": "A5", "title": "NODE + SESSION", "course": "CS5001.19973.202309", "dueDate": "Nov 13 at 11:59pm", "points": 100 },
+    { "_id": "A6", "title": "MONGO", "course": "CS5001.19973.202309", "dueDate": "Nov 27 at 11:59pm", "points": 100 },
+
+
+    { "_id": "A1", "title": "ENV + HTML", "course": "CS5002.19998.202309", "dueDate": "Sep 18 at 11:59pm", "points": 100 },
+    { "_id": "A2", "title": "CSS + BOOTSTRAP", "course": "CS5002.19998.202309", "dueDate": "Oct 2 at 11:59pm", "points": 100 },
+    { "_id": "A3", "title": "JS + REACT", "course": "CS5002.19998.202309", "dueDate": "Oct 16 at 11:59pm", "points": 100 },
+    { "_id": "A4", "title": "STATE + REDUX", "course": "CS5002.19998.202309", "dueDate": "Oct 30 at 11:59pm", "points": 100 },
+    { "_id": "A5", "title": "NODE + SESSION", "course": "CS5002.19998.202309", "dueDate": "Nov 13 at 11:59pm", "points": 100 },
+    { "_id": "A6", "title": "MONGO", "course": "CS5002.19998.202309", "dueDate": "Nov 27 at 11:59pm", "points": 100 }
+]
+
+

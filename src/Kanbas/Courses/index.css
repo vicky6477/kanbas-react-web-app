@@ -1,0 +1,79 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.wd-icon-bar {
+    margin-left: 30px;
+    color: #b62828;
+    font-size: 1.5em;
+    margin-right: 30px;
+}
+
+.course-link {
+    color: #b62828;
+    text-decoration: none;
+}
+
+.separator {
+    margin: 0 10px;
+}
+
+.module-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+}
+
+.button-section {
+    gap: 10px;
+    /* box-shadow: inset 0 -1px 0 0 #e0e0e0;  */
+    margin-bottom: 40px;
+    
+}
+
+.button-section .btn {
+    width: auto;            
+    white-space: nowrap;    
+    padding-left: 20px;    
+    padding-right: 20px;
+    border: none;
+}
+
+.module-container .module{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: max-content;
+   
+}
+
+.list-group, .module-container .module {
+    max-width: 200%; }
+
+/* .breadcrumb-section {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;      
+    justify-content: flex-start;
+    box-shadow: inset 0 -1px 0 0 #e0e0e0; 
+    padding-bottom: 10px;
+
+} */
+
+/* 样式文件中 */
+body, html {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.main-content {
+    height: 100%; 
+    overflow-y: hidden; 
+}
+
+.overflow-y-scroll {
+    overflow-y: auto;
+}

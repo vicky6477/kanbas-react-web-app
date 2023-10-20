@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useParams, Routes, Route, Navigate, useLocation, Link } from "react-router-dom";
 import JsonPre from "../../Labs/a3/JsonPre";
 import db from "../Database";
 import CourseNavigation from "./CourseNavigation";
@@ -19,14 +19,14 @@ function Courses() {
 
     return (
         <div className="main-content">
-            <nav class="breadcrumb-section" aria-label="breadcrumb">
-                <ol class="breadcrumb">
+            <nav className="breadcrumb-section" aria-label="breadcrumb">
+                <ol className="breadcrumb">
                     <FaBars className="wd-icon-bar" />
-                    <a href={pathname} className="course-link">
+                    <Link to={pathname} className="course-link">
                         {course._id}
-                    </a>
+                    </Link>
                     <span className="separator">&gt;</span>
-                    <hr/>
+                    <hr />
                     {screen}
                 </ol>
             </nav>

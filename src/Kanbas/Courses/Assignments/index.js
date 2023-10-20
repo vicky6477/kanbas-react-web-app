@@ -18,9 +18,9 @@ function SearchSection() {
                 {elements.map((element, index) => (
                     <li key={index} className="list-group-item  p-0 me-2">
                         {element.type === "button" && (
-                            <a href="#" className={`btn ${element.btnClass}`}>
+                           <button className={`btn ${element.btnClass}`}>
                                 {element.label}
-                            </a>
+                            </button>
                         )}
                         {element.type === "select" && (
                             <select className="form-select">
@@ -40,6 +40,7 @@ function SearchSection() {
 
 function Assignments() {
     const { courseId } = useParams();
+
     const assignments = db.assignments;
     const courseAssignments = assignments.filter((assignment) => assignment.course === courseId);
 
@@ -50,21 +51,25 @@ function Assignments() {
 
                 <div className="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
                     <h2>ASSIGNMENTS</h2>
-                    <a href="#" className="btn btn-secondary float-end">
+                    <button className="btn btn-secondary float-end">
                         +40% of Total
-                    </a>
+                    </button>
                 </div>
                 {courseAssignments.map((assignment) => (
-                    <Link
+                    <div
                         key={assignment._id}
-                        to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
                         className="list-group-item list-group-item-action"
                     >
                         <div className="d-flex align-items-center">
                             <div className="d-flex align-items-start">
                                 <HiOutlineEllipsisVertical />
                                 <HiOutlineEllipsisVertical />
-                                <BsPencilSquare style={{ marginRight: "10px" }} />
+                                <Link 
+                                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                                    style={{ marginRight: "10px" }}
+                                >
+                                    <BsPencilSquare />
+                                </Link>
                             </div>
                             <div>
                                 <span>{assignment._id} - {assignment.title}</span>
@@ -83,12 +88,11 @@ function Assignments() {
                             <BsCheck style={{ marginLeft: "10px", color: "green" }} />
                             <HiOutlineEllipsisVertical />
                         </div>
-                    </Link>
+                    </div>
                 ))}
             </div>
         </div>
     );
 }
-
 
 export default Assignments;

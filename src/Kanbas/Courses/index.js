@@ -34,7 +34,7 @@ function Courses() {
             <CourseNavigation />
 
             <div
-                className="overflow-y-scroll position-absolute bottom-0 end-0"
+                className="overflow-y-scroll position-fixed bottom-0 end-0"
                 style={{
                     left: "320px",
                     top: "50px",

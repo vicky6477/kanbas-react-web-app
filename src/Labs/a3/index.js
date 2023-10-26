@@ -5,6 +5,7 @@ import Styles from "./Styles";
 import ConditionalOutput from "./ConditionalOutput";
 import TodoItem from "./todos/TodoItem";
 import TodoList from "./todos/TodoList";
+import Q1 from "./Q1";
 function Assignment3() {
     return (
         <div>

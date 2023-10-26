@@ -1,0 +1,31 @@
+.grades-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    /* Add styles for sidebar */
+}
+
+.grades-content {
+    width: 80%;
+    padding: 20px;
+}
+
+header {
+    /* Styles for header */
+}
+
+.grades-controls {
+    /* Styles for controls above the table */
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grades-table th, .grades-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}

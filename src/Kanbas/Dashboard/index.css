@@ -16,20 +16,6 @@
 }
 
 
-/* .card img {
-    height: 50;
-    width: auto;
-} */
-
-/* .card h5 {
-    margin: 0.5rem 0;
-    font-weight: bold;
-}
-
-.card p {
-    margin: 0.25rem 0;
-} */
-
 .card-title {
     color: blue;
     white-space: nowrap;
@@ -68,4 +54,12 @@
 .wd-kanbas-navigation {
     min-height: 150vh;
     background-color: black !important;
+}
+
+.form-control {
+    max-width: 250px;
+}
+
+.btn {
+    margin: 5px; 
 }

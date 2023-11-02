@@ -11,11 +11,12 @@ import Grades from "./Grades";
 import { FaBars } from "react-icons/fa";
 import "./index.css";
 
-function Courses() {
+function Courses({ courses }) {
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const [empty, kanbas, courses, id, screen] = pathname.split("/");
-    const course = db.courses.find((course) => course._id === courseId);
+    const [empty, kanbas, id, screen] = pathname.split("/");
+    const course = courses.find((course) => course._id === courseId);
+
 
     return (
         <div className="main-content">
@@ -23,7 +24,7 @@ function Courses() {
                 <ol className="breadcrumb">
                     <FaBars className="wd-icon-bar" />
                     <Link to={pathname} className="course-link">
-                        {course._id}
+                        {course._name}
                     </Link>
                     <span className="separator">&gt;</span>
                     <hr />

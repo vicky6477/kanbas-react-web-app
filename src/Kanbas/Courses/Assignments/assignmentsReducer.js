@@ -3,7 +3,6 @@ import db from "../../Database";
 
 const initialState = {
   assignments: db.assignments,
-  selectedAssignment: null,
 };
 
 const assignmentsSlice = createSlice({

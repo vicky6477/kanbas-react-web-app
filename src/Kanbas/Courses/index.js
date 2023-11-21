@@ -16,7 +16,7 @@ function Courses() {
     const { courseId } = useParams();
     const { pathname } = useLocation();
     const [empty, kanbas, courses, id, screen] = pathname.split("/");
-    const [course, setCourse] = useState({}); // = db.courses.find((course) => course._id === courseId);
+    const [course, setCourse] = useState({}); 
     const fetchCourse = async () => {
         const course = await client.fetchCourse(courseId);
         setCourse(course);

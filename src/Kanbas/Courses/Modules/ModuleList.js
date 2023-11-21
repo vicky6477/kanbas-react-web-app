@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import db from "../../Database";
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addModule, deleteModule, updateModule, setModule, setModules } from "./modulesReducer";
@@ -16,8 +17,6 @@ function ModuleList() {
             dispatch(addModule(module));
         });
     };
-
-    
 
     const handleDeleteModule = (moduleId) => {
         client.deleteModule(moduleId).then((status) => {

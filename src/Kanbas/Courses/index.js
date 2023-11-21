@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams, Routes, Route, Navigate, useLocation, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import JsonPre from "../../Labs/a3/JsonPre";
 import db from "../Database";
 import CourseNavigation from "./CourseNavigation";
@@ -8,27 +8,34 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
+import * as client from "./client";
 import { FaBars } from "react-icons/fa";
 import "./index.css";
 
-function Courses({ courses }) {
+function Courses() {
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const [empty, kanbas, id, screen] = pathname.split("/");
-    const course = courses.find((course) => course._id === courseId);
+    const [empty, kanbas, courses, id, screen] = pathname.split("/");
+    const [course, setCourse] = useState({}); // = db.courses.find((course) => course._id === courseId);
+    const fetchCourse = async () => {
+        const course = await client.fetchCourse(courseId);
+        setCourse(course);
+    };
 
+    useEffect(() => {
+        fetchCourse();
+    }, []);
 
     return (
         <div className="main-content">
             <nav className="breadcrumb-section" aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <FaBars className="wd-icon-bar" />
-                    <Link to={pathname} className="course-link">
-                        {course._name}
-                    </Link>
-                    <span className="separator">&gt;</span>
-                    <hr />
+                     <span className="separator">&gt;</span>
+                    {course._id}   / 
                     {screen}
+                    <hr />
+                  
                 </ol>
             </nav>
 

@@ -1,62 +1,48 @@
 import { useParams } from "react-router-dom";
 import db from "../../Database";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addModule, deleteModule, updateModule, setModule } from "./modulesReducer";
-
-// function ButtonSection() {
-//     const elements = [
-//         { type: "button", label: "Collapse All", btnClass: "btn-secondary" },
-//         { type: "button", label: "View Progress", btnClass: "btn-secondary" },
-//         {
-//             type: "select",
-//             options: [
-//                 { value: "Publish All", label: "Publish All" },
-//                 { value: "Publish all items and modules", label: "Publish all items and modules" },
-//                 { value: "Unpublish", label: "Unpublish" },
-//             ],
-//         },
-//         { type: "button", label: "+ Module", btnClass: "btn-danger" },
-//     ];
-
-//     return (
-//         <div className="button-section">
-//             <ul className="list-group list-group-horizontal float-end">
-//                 {elements.map((element, index) => (
-//                     <li key={index} className="list-group-item p-0 me-2">
-//                         {element.type === "button" && (
-//                             <a href="#" className={`btn ${element.btnClass}`}>
-//                                 {element.label}
-//                             </a>
-//                         )}
-//                         {element.type === "select" && (
-//                             <select className="form-select">
-//                                 {element.options.map((option, oIndex) => (
-//                                     <option key={oIndex} value={option.value}>
-//                                         {option.label}
-//                                     </option>
-//                                 ))}
-//                             </select>
-//                         )}
-//                     </li>
-//                 ))}
-//             </ul>
-//         </div>
-//     );
-// }
+import { addModule, deleteModule, updateModule, setModule, setModules } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 
 function ModuleList() {
     const { courseId } = useParams();
+    useEffect(() => {
+        findModulesForCourse(courseId).then((modules) => dispatch(setModules(modules)));
+    }, [courseId]);
+
+    const handleAddModule = () => {
+        createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
+
+    
+
+    const handleDeleteModule = (moduleId) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
+    const handleUpdateModule = async () => {
+        try {
+            await client.updateModule(module); 
+            dispatch(updateModule({ ...module, originalId: originalModuleId })); // Updates local state
+        } catch (error) {
+            console.error("Error updating module:", error);
+        }
+    };
+
     const modules = useSelector((state) => state.modulesReducer.modules);
     const module = useSelector((state) => state.modulesReducer.module);
     const dispatch = useDispatch();
     const [editingModule, setEditingModule] = useState(null);
     const [originalModuleId, setOriginalModuleId] = useState(null);
 
-
     return (
         <div>
-            {/* <ButtonSection /> */}
             <div className="clearfix"></div>
             <hr />
             <ul className="list-group mb-3">
@@ -88,21 +74,11 @@ function ModuleList() {
                         />
 
                         <div>
-                            <button
-                                onClick={() => dispatch(addModule({ ...module, course: courseId }))}
-                                className="btn btn-primary me-2"
-                            >
+                            <button onClick={handleAddModule} className="btn btn-primary me-2">
                                 Add
                             </button>
 
-                            <button
-                                onClick={() => {
-                                    dispatch(updateModule({ ...module, originalId: originalModuleId }));
-                                    setEditingModule(null);
-                                    setOriginalModuleId(null);
-                                }}
-                                className="btn btn-secondary"
-                            >
+                            <button onClick={handleUpdateModule} className="btn btn-secondary">
                                 Update
                             </button>
                         </div>
@@ -120,7 +96,7 @@ function ModuleList() {
                                     <p>{module._id}</p>
                                 </div>
                                 <div>
-                                    <button onClick={() => dispatch(deleteModule(module._id))} className="btn btn-warning">
+                                    <button onClick={() => handleDeleteModule(module._id)} className="btn btn-warning">
                                         Delete
                                     </button>
 

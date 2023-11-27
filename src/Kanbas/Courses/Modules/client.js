@@ -1,8 +1,8 @@
 import axios from "axios";
-const COURSES_URL = "https://kanbas-node-server-app-4cpn.onrender.com/courses";
-const MODULES_URL= "https://kanbas-node-server-app-4cpn.onrender.com/modules";
 
-
+const API_BASE = process.env.REACT_APP_API_BASE;
+const COURSES_URL = `${API_BASE}/courses`;
+const MODULES_URL = `${API_BASE}/modules`;
 
 export const updateModule = async (module) => {
   const response = await axios.put(`${MODULES_URL}/${module._id}`, module);
@@ -23,3 +23,4 @@ export const findModulesForCourse = async (courseId) => {
     const response = await axios.get(`${COURSES_URL}/${courseId}/modules`);
     return response.data;
 };
+

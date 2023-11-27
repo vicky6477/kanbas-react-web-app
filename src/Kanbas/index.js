@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 function Kanbas() {
     const [courses, setCourses] = useState([]);
-    const URL = "http://localhost:4000/courses";
+   const URL = `${process.env.REACT_APP_API_BASE}/courses`;
 
     const [course, setCourse] = useState(null);
     const [newCourseName, setNewCourseName] = useState("");

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BsTrash3Fill, BsFillCheckCircleFill, BsPencil, BsPlusCircleFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import * as client from "./client";
 function UserTable() {
     const [users, setUsers] = useState([]);
@@ -89,7 +90,9 @@ function UserTable() {
                 <tbody>
                     {users.map((user) => (
                         <tr key={user._id}>
-                            <td>{user.username}</td>
+                            {/* <td>{user.username}</td> */}
+                            <Link to={`/project/account/${user._id}`}>{user.username}</Link>
+
                             <td>{user.firstName}</td>
                             <td>{user.lastName}</td>
                             <td className="text-nowrap">

@@ -1,14 +1,22 @@
 import * as client from "./client";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 function Account() {
     const [account, setAccount] = useState(null);
     const navigate = useNavigate();
+    const signout = async () => {
+        await client.signout();
+        navigate("/project/signin");
+    };
+
     const fetchAccount = async () => {
         const account = await client.account();
         setAccount(account);
     };
-   
+    const save = async () => {
+        await client.updateUser(account);
+    };
+
 
     useEffect(() => {
         fetchAccount();
@@ -32,7 +40,14 @@ function Account() {
                         <option value="FACULTY">Faculty</option>
                         <option value="STUDENT">Student</option>
                     </select>
-                  
+                    <button className="btn btn-primary w-100" onClick={save}>
+                        Save
+                    </button>
+                     <Link to="/project/admin/users" className="btn btn-warning w-100">
+                        Users
+                    </Link>
+                    <button className="btn btn-danger w-100" onClick={signout}>Signout</button>
+                   
                 </div>
             )}
         </div>

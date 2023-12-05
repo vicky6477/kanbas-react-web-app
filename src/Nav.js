@@ -1,22 +1,30 @@
-import { Link, useLocation } from "react-router-dom";
-function Nav() {
-    const { pathname } = useLocation();
-    return (
-        <nav className="nav nav-tabs mt-2">
-            <Link className="nav-link" to="/Labs/a3">
-                A3
-            </Link>
-            <Link className="nav-link" to="/Labs/a4">
-                A4
-            </Link>
+import { NavLink } from "react-router-dom";
 
-            <Link to="/hello" className={`nav-link ${pathname.includes("hello") ? "active" : ""}`}>
-                Hello
-            </Link>
-            <Link to="/Kanbas" className={`nav-link ${pathname.includes("Kanbas") ? "active" : ""}`}>
-                Kanbas
-            </Link>
+function Nav() {
+    // This function determines the style for each NavLink depending on whether it is active
+    const getNavLinkClass = (isActive) => {
+        return isActive ? "nav-link active" : "nav-link";
+    };
+
+    return (
+        <nav className="nav flex-column nav-pills mt-2">
+            <NavLink className={({ isActive }) => getNavLinkClass(isActive)} to="./home">
+                Home
+            </NavLink>
+            <NavLink className={({ isActive }) => getNavLinkClass(isActive)} to="./search">
+                Search
+            </NavLink>
+            <NavLink className={({ isActive }) => getNavLinkClass(isActive)} to="./Signin">
+                Signin
+            </NavLink>
+            <NavLink className={({ isActive }) => getNavLinkClass(isActive)} to="./Signup">
+                Signup
+            </NavLink>
+            <NavLink className={({ isActive }) => getNavLinkClass(isActive)} to="./Account">
+                Account
+            </NavLink>
         </nav>
     );
 }
+
 export default Nav;

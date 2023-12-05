@@ -2,7 +2,6 @@ import Labs from "./Labs";
 import Kanbas from "./Kanbas";
 import HelloWorld from "./Labs/a3/HelloWorld";
 import { HashRouter, Link, Navigate, Route, Routes } from "react-router-dom";
-import StateManagement from "./Lectures/StateManagement";
 import Project from "./project";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
                     <Route path="/Hello" element={<HelloWorld />} />
                     <Route path="/Labs/*" element={<Labs />} />
                     <Route path="/Kanbas/*" element={<Kanbas />} />
-                    <Route path="/Lectures" element={<StateManagement />} />
                 </Routes>
                 {/* {screen === "Hello" && <HelloWorld />}
         {screen === "Labs" && <Labs />}
